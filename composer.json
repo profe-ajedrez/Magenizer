@@ -12,7 +12,7 @@
         "php": ">=5.3.0"
     },
     "autoload": {
-        "psr4" : {
+        "psr-4" : {
             "undercoder\\magenizer" : "src/"
         }
     }
