@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "undercoder\\magenizer" : "src/"
+            "undercoder\\magenizer\\" : "src/"
         }
     }
 }
