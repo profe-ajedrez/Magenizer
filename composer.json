@@ -4,7 +4,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Andres Reyes",
+            "name" : "Andres Reyes",
             "email": "chess.coach.ar@gmail.com"
         }
     ],

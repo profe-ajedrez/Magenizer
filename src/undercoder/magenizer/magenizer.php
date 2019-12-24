@@ -1,5 +1,5 @@
 <?php
-namespace undercoder;
+namespace undercoder\magenizer;
 
 /**
  * Magenizer
