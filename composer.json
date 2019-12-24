@@ -1,0 +1,12 @@
+{
+    "name": "undercoder/magenizer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andres Reyes",
+            "email": "chess.coach.ar@gmail.com"
+        }
+    ],
+    "require": {}
+}
