@@ -1,7 +1,5 @@
 <?php
-
 namespace undercoder;
-
 
 /**
  * Magenizer
@@ -39,43 +37,47 @@ namespace undercoder;
  * // HEROIC SERVICES FOR FREE
  * // 666, Where The Braves Dies Street, Santiago, Chile.
  *
- * A SHORT STORY
- * I wrote this class when at work I had to extract data from a raw string produced for the output of pdftotext.
- * This output was very irregular and its disposition changed from case to case, so I thought
- * the data as a target surrounded by a starting token and an ending token.
- * E.g. (the <> are only for the example): <name> Ermistuligio de las Mercedelines <number> 12 <weigth> 145 ...etc...
- * So, I could fetch the data pointing to the string between the tokens.
- * At that time, I was studying design patterns, so I implemented this solution using the iterator pattern.
- *
  */
+
 class Magenizer implements \Iterator
 {
-    /* @String */
+    /* @String the text to be traversed */
     private $text;
 
-    /* @Array */
+    /* @Array the array containing the tokens used to search for data */
     private $tokens;
 
-    /* @Bool */
+    /* @Bool indicates whether forwards or backwards. default false */
     private $reverse;
 
+    /* @Bool flag for use the PCRE_MULTILINE (m) pattern modificator. default true  */
     private $multiline;
+
+    /* @Bool flag for use the PCRE_DOTALL (s) pattern modificator. default true */
     private $singleline;
+
+    /* @Bool flag for use the PCRE_CASELESS (i) pattern modificator. default false */
     private $caseInsensitive;
+
+    /* @Bool flag for the use of the PCRE_EXTENDED (x) pattern modificator. default false */
     private $extended;
-    private $last;
+
+    /* @Bool flag for use the PCRE_UNGREEDY (U) pattern indicator. default true */
     private $ungreedy;
+
+    /* @Bool indicates whether apply trim() to the resultant data. default true  */
     private $stripSpaces;
 
+    /* @int internally stores the position of the current element*/
     private $position;
 
-
+    /* @Array stores an array of tokens */
     private $keyTokens;
 
 
     public function __construct(
         $txt,
-        $tokens = array(),
+        $tokens,
         $reverse = false,
         $multiline = true,
         $singleline = true,
@@ -93,8 +95,8 @@ class Magenizer implements \Iterator
         $this->caseInsensitive = $caseInsensitive;
         $this->extended        = $extended;
 
-        $this->ungreedy     = $ungreedy;
-        $this->$stripSpaces = $stripSpaces;
+        $this->ungreedy    = $ungreedy;
+        $this->stripSpaces = $stripSpaces;
 
         $this->keyTokens = array_keys($this->tokens);
 
@@ -113,11 +115,11 @@ class Magenizer implements \Iterator
 
     public function current()
     {
-
+        $token = $this->keyTokens[ $this->position ];
         return $this->getToken(
             $this->keyTokens[ $this->position ],
-            $this->tokens[ $this->keyTokens[ $this->position ] ][ "from" ],
-            $this->tokens[ $this->keyTokens[ $this->position ] ][ "to" ]
+            $this->tokens[ $token ][ "from" ],
+            $this->tokens[ $token ][ "to" ]
         );
     }
 
@@ -140,6 +142,7 @@ class Magenizer implements \Iterator
     {
         return isset($this->keyTokens[$this->position]);
     }
+
 
     private function getToken($token, $from, $to)
     {
