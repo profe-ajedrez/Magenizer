@@ -1,0 +1,20 @@
+{
+    "name": "undercoder/magenizer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrés Reyes a.k.a. Jacobopus a.k.a. profe-ajedrez",
+            "email": "metaljacobo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=5.6.11"
+    },
+    "autoload": {
+        "psr-0": {
+            "undercoder" : "src/"
+        }
+    }
+}
