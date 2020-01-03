@@ -1,5 +1,6 @@
 {
     "name": "undercoder/magenizer",
+    "description": "Implements Iterator interface over a String for extract data with an array of tokens. The name comes from Mage and tokenizer :)",
     "type": "library",
     "license": "MIT",
     "authors": [
