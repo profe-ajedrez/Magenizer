@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "903bce352a7ff16f50e29fd2a4df8232",
+    "packages": [
+        {
+            "name": "undercoder/magenizer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/profe-ajedrez/Magenizer.git",
+                "reference": "8635f16f14cfa45f65709924ef13ae26b4c69a5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/profe-ajedrez/Magenizer/zipball/8635f16f14cfa45f65709924ef13ae26b4c69a5c",
+                "reference": "8635f16f14cfa45f65709924ef13ae26b4c69a5c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "undercoder\\magenizer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andres Reyes",
+                    "email": "chess.coach.ar@gmail.com"
+                }
+            ],
+            "time": "2019-12-24T14:44:57+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "undercoder/magenizer": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

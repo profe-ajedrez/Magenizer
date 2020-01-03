@@ -1,0 +1,9 @@
+{
+    "name": "jacobopus/testpackagist",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "undercoder/magenizer": "dev-master"
+    }
+}
