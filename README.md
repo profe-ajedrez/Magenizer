@@ -12,7 +12,7 @@ Given an array of tokens, lets iterate over a String, returning every time the c
  THIS document is ELECTRONIC
  ANDRES REYES
  N°3
- WORK AT: HEROIC SERVICES FOR FREE,
+ WORK AT: HEROICAL SERVICES FOR FREE,
  ADDRESS  :  666, Where The Braves Dies Street, Santiago, Chile.
  ...Some more of weird strings...
  RAW;
@@ -32,11 +32,11 @@ Given an array of tokens, lets iterate over a String, returning every time the c
  //------
  //ANDRES REYES
  //3
- // HEROIC SERVICES FOR FREE
+ // HEROICAL SERVICES FOR FREE
  // 666, Where The Braves Dies Street, Santiago, Chile.
  ```
 
-As you could see in the example, supports regexr, but without the delimiting _/_ because they are added internally.
+As you could see in the example, regexr are supported, but without the delimiting _/_ because they are added internally.
 
 @author Andrés Reyes
 
